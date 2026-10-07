@@ -1,11 +1,43 @@
 .shopping-input {
-  display: flex;
-  gap: 0.5rem;
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) 128px;
+  gap: 40px;
   align-items: center;
-  margin-bottom: 1rem;
+  padding: 12px 10px 8px 20px;
+  border: 1px solid #3563b2;
 }
 
 input {
-  flex: 1;
-  padding: 0.4rem;
+  width: 100%;
+  min-width: 0;
+  height: 52px;
+  padding: 8px;
+  border: 1px solid #3563b2;
+  border-radius: 10px;
+  color: #000;
+  background: #fff;
+  text-align: center;
+}
+
+button {
+  width: 100%;
+  font-size: 26px;
+}
+
+@media (max-width: 600px) {
+  .shopping-input {
+    grid-template-columns: minmax(0, 1fr) 112px;
+    gap: 12px;
+    padding: 10px;
+  }
+
+  input {
+    height: 46px;
+    padding: 6px;
+  }
+
+  button {
+    min-height: 46px;
+    font-size: 22px;
+  }
 }

@@ -1,6 +1,17 @@
 .container {
-  max-width: 480px;
-  margin: 2rem auto;
-  padding: 0 1rem;
-  font-family: system-ui, sans-serif;
+  max-width: 640px;
+  min-height: 414px;
+  margin: 32px auto;
+  padding: 36px 56px 96px;
+  border: 1px solid #3563b2;
+  font-size: 22px;
+}
+
+@media (max-width: 600px) {
+  .container {
+    min-height: 320px;
+    margin: 16px auto;
+    padding: 24px 16px 48px;
+    font-size: 18px;
+  }
 }
