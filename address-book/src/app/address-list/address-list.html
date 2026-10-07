@@ -1,0 +1,15 @@
+<div class="row">
+  <div class="col-md-4">
+    <button type="button" class="btn btn-primary mb-3" (click)="addAddress()">New Address</button>
+    <div class="list-group">
+      @for (address of addresses; track address) {
+        <app-address-list-element [address]="address" (click)="select(address)" />
+      }
+    </div>
+  </div>
+  <div class="col-md-8">
+    @if (currentAddress !== null) {
+      <app-address-view [address]="currentAddress" (fireDelete)="deleteCurrent()" />
+    }
+  </div>
+</div>

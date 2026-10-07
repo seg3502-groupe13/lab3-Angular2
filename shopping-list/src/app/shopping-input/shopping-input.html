@@ -1,0 +1,5 @@
+<form class="shopping-input" (ngSubmit)="submitItem()">
+  <label for="item">Nouvel article</label>
+  <input id="item" name="item" placeholder="ex. 5 pommes" [(ngModel)]="itemName" />
+  <button type="submit">Ajouter</button>
+</form>

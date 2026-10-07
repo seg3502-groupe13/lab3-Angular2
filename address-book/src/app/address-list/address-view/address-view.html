@@ -1,0 +1,28 @@
+<form>
+  <fieldset [disabled]="!edit">
+    <div class="mb-2">
+      <label for="first" class="form-label">Prénom</label>
+      <input id="first" name="firstName" class="form-control" [(ngModel)]="address.firstName">
+    </div>
+    <div class="mb-2">
+      <label for="last" class="form-label">Nom</label>
+      <input id="last" name="lastName" class="form-control" [(ngModel)]="address.lastName">
+    </div>
+    <div class="mb-2">
+      <label for="phone" class="form-label">Téléphone</label>
+      <input id="phone" name="phone" class="form-control" [(ngModel)]="address.phone">
+    </div>
+    <div class="mb-2">
+      <label for="email" class="form-label">E-mail</label>
+      <input id="email" name="email" type="email" class="form-control" [(ngModel)]="address.email">
+    </div>
+    <div class="mb-2">
+      <label for="notes" class="form-label">Notes</label>
+      <textarea id="notes" name="notes" class="form-control" [(ngModel)]="address.notes"></textarea>
+    </div>
+  </fieldset>
+  <button type="button" class="btn btn-secondary me-2" (click)="toggleEdit()">
+    {{ edit ? "Protect" : "Edit" }}
+  </button>
+  <button type="button" class="btn btn-danger" (click)="delete()">Delete</button>
+</form>

@@ -1,0 +1,11 @@
+.shopping-input {
+  display: flex;
+  gap: 0.5rem;
+  align-items: center;
+  margin-bottom: 1rem;
+}
+
+input {
+  flex: 1;
+  padding: 0.4rem;
+}

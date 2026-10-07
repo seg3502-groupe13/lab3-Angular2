@@ -1,0 +1,12 @@
+@if (items.length === 0) {
+  <p>Votre liste est vide.</p>
+} @else {
+  <ul class="shopping-list">
+    @for (item of items; track $index) {
+      <li>
+        <span>{{ item }}</span>
+        <button type="button" (click)="requestDelete($index)">Supprimer</button>
+      </li>
+    }
+  </ul>
+}
